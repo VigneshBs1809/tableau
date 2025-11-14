@@ -1,36 +1,80 @@
-🎯 Tableau Case Study 1 – Titanic Dataset
+#  **  TITANIC DATASET ANALYSIS**
 
 This repository contains the full set of visualization tasks and instructions for the Titanic Dataset Tableau Case Study – 1.
 All visualizations are created using Tableau Desktop, with clear steps for reproducing each chart.
 
 Tasks Included
-I. Bar Chart — Passengers vs Gender
-
-II. Survival Count by Gender
-
-III. Survival Rate by Passenger Class
-
-IV. Age Distribution of Passengers
-
-V. Average Fare by Class
-
-VI. Scatter Plot — Fare vs Age
-
-VII. Passenger Count by Embarkation Port
-
-VIII. Heatmap — Survival Rate by Gender & Class
-
-IX. Box Plot — Age vs Survival
-
-X. Pie Chart — Dimension + Measure
-
-
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 
 
+#### (i) Bar Chart — Passengers vs Gender
+- **Drag:** Sex → Columns, PassengerId → Rows.
+- **Modify:** Change PassengerId to **Count**.
+- **View:** Select **Bar Chart**.
+
+
+
+#### (ii) Survival Count by Gender
+- **Drag:** Sex → Columns, Survived → Rows.
+- **Add:** PassengerId → Rows → Set to **Count**.
+- **View:** Choose **Stacked Bar Chart**.
+
+
+
+#### (iii) Survival Rate by Passenger Class
+- **Drag:** Pclass → Columns, Survived → Rows.
+- **Modify:** Change aggregation of Survived **SUM → AVG** (survival rate).
+- **View:** Bar Chart.
+
+
+
+#### (iv) Age Distribution (Histogram)
+- **Drag:** Age → Columns, PassengerId → Rows (Count).
+- **Create:** Right-click Age → **Create → Bins** → bin size = **5 or 10**.
+- **View:** Histogram.
+
+
+
+#### (v) Average Fare by Class
+- **Drag:** Pclass → Columns, Fare → Rows.
+- **Modify:** Change Fare aggregation to **Average**.
+- **View:** Bar Chart.
+
+
+
+#### (vi) Scatter Plot — Fare vs Age
+- **Drag:** Age → Columns, Fare → Rows.
+- **Modify:** Mark Type → **Circle**.
+
+
+
+#### (vii) Passenger Count by Embarkation Port
+- **Drag:** Embarked → Columns, PassengerId → Rows → Set to **Count**.
+- **View:** Bar Chart.
+
+
+
+#### (viii) Survival Heatmap — Gender vs Class
+- **Drag:** Sex → Columns, Pclass → Rows.
+- **Add:** Survived → Color → Set aggregation = **AVG**.
+- **Modify:** Mark Type → **Square (Heatmap)**.
+
+
+
+#### (ix) Box Plot — Age vs Survival
+- **Drag:** Survived → Columns, Age → Rows.
+- **Add:** Analysis → **Box Plot**.
+
+
+
+#### (x) Pie Chart — Dimension + Measure
+**Example:** Gender distribution of passengers  
+- **Drag:** Sex → Color, PassengerId → Rows → Set to **Count**.
+- **Modify:** Mark Type → **Pie**.
+- **Label:** Add Sex + Count to Label.
+
+---
 
 
 
@@ -40,46 +84,96 @@ X. Pie Chart — Dimension + Measure
 
 
 
-🎯 Tableau Case Study 2-Coffee Chain Dataset
+
+
+
+
+
+
+#  **  COFFEE CHAIN DATASET ANALYSIS**
 
 Tasks Included 
 
-I. Create a heat map for Product Type, State, and Profit. Identify which state has the lowest profit for Espresso.
+#### (i) Heat Map — Product Type, State, and Profit  
+- **Drag:** Product Type → Rows, State → Columns, Profit → Color.  
+- **Identify:** The state with the *lowest profit* for **Espresso** by checking the darkest (lowest) color.
 
-II. Using a boxplot, identify which of the Espresso products has the highest distribution of sales.
+#### (ii) Box Plot — Espresso Sales Distribution  
+- **Drag:** Product → Columns, Sales → Rows, Filter Product Type = Espresso.  
+- **Add:** Analysis → Box Plot.  
+- **Identify:** The Espresso product with the *highest spread* in sales.
 
-III. Create a bar chart with Product Type, Product, and Profit. Write your conclusion.
+#### (iii) Bar Chart — Product Type, Product, and Profit  
+- **Drag:** Product Type → Columns, Product → Color, Profit → Rows.  
+- **Conclusion:** Shows which product types drive profit or loss.
 
-IV. Create a scatter plot with State, Sales, and Profit. Draw your conclusion.
+#### (iv) Scatter Plot — State, Sales, and Profit  
+- **Drag:** State → Columns, Sales → Rows, Profit → Color, Mark Type → Circle.  
+- **Conclusion:** States with high sales but low profit can be identified easily.
 
-V. Identify the state with the highest and the lowest profit in the market.
+#### (v) Identify Highest & Lowest Profit State  
+- **Create View:** Drag State → Rows, Profit → Columns.  
+- Sort descending to find **highest** and **lowest** profit states.
 
-VI. What is the number of Sales in the state Nevada for the product Decaf Espresso?
+#### (vi) Sales in Nevada for Decaf Espresso  
+- Apply **Filters:** State = Nevada, Product = Decaf Espresso.  
+- Observe total **Sales** in the view.
 
-VII. What is the contribution of Tea (in percentage) to the overall Profit?
+#### (vii) Contribution of Tea to Overall Profit (%)  
+- **Filter:** Product Type = Tea.  
+- Compute: `SUM(Profit for Tea) / SUM(Profit for All)` × 100.
 
-VIII. What is the average marketing in the area codes 660 and 818?
+#### (viii) Average Marketing in Area Codes 660 and 818  
+- Filter Area Code = 660, 818 → Drag Marketing → Rows → Measure = Average.
 
-IX. In California, which product has the highest and lowest profit?
+#### (ix) Highest & Lowest Profit Product in California  
+- Filter State = California → Drag Product → Rows, Profit → Columns.  
+- Sort to identify top and bottom products.
 
-X. Using side-by-side circles, identify the minimum marketing value for the product Coffee Beans Colombian.
+#### (x) Side-by-Side Circles — Minimum Marketing for Coffee Beans (Colombian)  
+- Filter Product = Coffee Beans Colombian → Drag Marketing → Rows, Market → Columns, Mark = Circle.  
+- Identify the minimum marketing value visually.
 
-XI. What is the contribution of Sales in the East market for Decaf?
+#### (xi) Contribution of Sales in East Market for Decaf  
+- Filter Product Type = Decaf → Market = East.  
+- Compute `(Sales in East for Decaf / Total Sales) × 100`.
 
-XII. In 2012, what is the contribution of Sales in the East market for Decaf?
+#### (xii) Contribution of Decaf Sales in East Market (2012)  
+- Add filter for **Order Date (Year = 2012)**.  
+- Repeat the above percentage calculation.
 
-XIII. What is the average profit for all the products starting with the letter 'C'?
+#### (xiii) Average Profit for Products Starting with “C”  
+- Apply **Filter → Product → Starts With “C”**.  
+- Drag Profit → Rows → Measure = Average.
 
-XIV. In the Central region, the Top 5 products by Sales contributed ____ % of the total Sales.
+#### (xiv) Central Region — Top 5 Products by Sales  
+- Filter Region = Central → Sort by Sales → Keep Top 5.  
+- Compute `(Sales of Top 5 / Total Sales) × 100`.
 
-XV. In 2013, identify the state with the highest profit in the West market.
+#### (xv) 2013 — Highest Profit State in West Market  
+- Filter Year = 2013 and Market = West.  
+- Sort Profit by descending → identify top state.
 
-XVI. Identify the total expenses-to-sales ratio for the state with the lowest profit.
+#### (xvi) Total Expenses-to-Sales Ratio of State with Lowest Profit  
+- Identify state with lowest profit → Create Calculated Field:  
+  `SUM(Expenses) / SUM(Sales)`.
 
-XVII. What is the distinct count of area codes for the state with the lowest budget margin in small markets?
+#### (xvii) Distinct Count of Area Codes — Lowest Budget Margin, Small Markets  
+- Filter Market Size = Small → Identify lowest Budget Margin state.  
+- Drag Area Code → Rows → Measure = Count (Distinct).
 
-XVIII. In 2013, what percentage of the total profit for Caffe Mocha falls under the Major Market?
+#### (xviii) 2013 — % of Profit for Caffe Mocha (Major Market)  
+- Filter Year = 2013, Product = Caffe Mocha, Market = Major.  
+- Compute `(Profit of Caffe Mocha Major / Total Profit 2013) × 100`.
 
-XIX. In which month and year did the Sales cross $1,100 for Decaf in Colorado as well as Florida?
+#### (xix) Month-Year when Decaf Sales Crossed $1,100 (Colorado & Florida)  
+- Filter Product Type = Decaf, State = Colorado & Florida.  
+- Drag Order Date → Columns → Set to Month/Year, Sales → Rows.  
+- Add reference line at 1100 → Identify the bars crossing that line.
 
-XX. Using treemaps, identify the market with the maximum budget Sales (based on size).
+#### (xx) Tree Map — Market by Budget Sales  
+- Drag Market → Label, Budget Sales → Size & Color → Mark Type = Tree Map.  
+- Identify market with the **largest rectangle** (maximum budget sales).
+
+---
+
