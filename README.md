@@ -1,6 +1,7 @@
 #  **  TITANIC DATASET ANALYSIS**
 
-This repository contains the full set of visualization tasks and instructions for the Titanic Dataset Tableau Case Study – 1.
+This repository contains the full set of visualization tasks and instructions for the Titanic Dataset and Coffee Dataset.
+
 All visualizations are created using Tableau Desktop, with clear steps for reproducing each chart.
 
 Tasks Included
